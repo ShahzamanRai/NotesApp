@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="70dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:fontFamily="@font/futuraheavyfont"
+        android:gravity="start"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/text_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:fontFamily="@font/futuramediumbt"
+        android:gravity="start"
+        android:text="Body will go here"
+        android:textSize="20sp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+</LinearLayout>
