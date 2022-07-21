@@ -3,6 +3,8 @@ package com.example.keepnotes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,28 +15,47 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
+    static ArrayList<model> arrNotes = new ArrayList<>();
+    static RecyclerViewAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    ArrayList<model> arrNotes = new ArrayList<>();
+    SearchView search;
+
+    public static void addNotes(String title, String text) {
+        arrNotes.add(new model(title, text));
+        adapter.notifyItemInserted(arrNotes.size() - 1);
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        search = findViewById(R.id.searchView);
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                filterList(s);
+                return true;
+            }
+        });
+
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
 
-        for (int i = 0; i < 8; i++) {
-            arrNotes.add(new model("Artificial intelligence", "Artificial intelligence (AI) is the " +
-                    "ability of a computer or a robot controlled by a computer to do tasks that are usually done by humans because they require human intelligence and discernment."));
-        }
-
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, arrNotes);
+        adapter = new RecyclerViewAdapter(this, arrNotes);
         recyclerView.setAdapter(adapter);
 
 
@@ -56,12 +77,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
-        String body = intent.getStringExtra("Body");
-        arrNotes.add(new model(title, body));
-        adapter.notifyItemInserted(arrNotes.size() - 1);
+    }
 
+    private void filterList(String text) {
+
+        List<model> filteredList = new ArrayList<>();
+        for (model item : arrNotes) {
+            if (item.text_model.toLowerCase().contains(text.toLowerCase()) || item.tite_model.toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+
+            adapter.setFilteredList(filteredList);
+
+        }
 
     }
 

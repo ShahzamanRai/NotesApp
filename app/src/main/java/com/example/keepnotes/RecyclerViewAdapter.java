@@ -10,15 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<model> arrNotes;
+    List<model> arrNotes;
 
     RecyclerViewAdapter(Context context, ArrayList<model> arrNotes) {
         this.context = context;
         this.arrNotes = arrNotes;
+    }
+
+    public void setFilteredList(List<model> filteredList) {
+        this.arrNotes = filteredList;
+        notifyDataSetChanged();
+
     }
 
     @NonNull

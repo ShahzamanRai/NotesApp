@@ -25,7 +25,7 @@
             android:gravity="start"
             android:text="Title"
             android:textColor="@color/black"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:theme="@style/ThemeOverlay.AppCompat.Light" />
 
         <TextView

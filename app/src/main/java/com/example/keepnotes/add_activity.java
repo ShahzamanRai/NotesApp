@@ -1,10 +1,10 @@
 package com.example.keepnotes;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,6 +13,7 @@ import java.util.Objects;
 
 public class add_activity extends AppCompatActivity {
 
+    MainActivity activity;
     private Toolbar toolbar_add;
 
     @Override
@@ -34,15 +35,22 @@ public class add_activity extends AppCompatActivity {
         EditText bodyText = findViewById(R.id.add_activity_text);
         Button saveBtn = findViewById(R.id.button);
 
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String titleBody = titleText.getText().toString();
                 String textBody = bodyText.getText().toString();
-                Intent intent = new Intent(add_activity.this, MainActivity.class);
-                intent.putExtra("title", titleBody);
-                intent.putExtra("Body", textBody);
-                startActivity(intent);
+
+                if (titleBody.equals("") && textBody.equals("")) {
+                    Toast.makeText(add_activity.this, "Fields can't be empty",
+                            Toast.LENGTH_LONG).show();
+                } else {
+
+                    MainActivity.addNotes(titleBody, textBody);
+                    finish();
+                }
+
             }
         });
 

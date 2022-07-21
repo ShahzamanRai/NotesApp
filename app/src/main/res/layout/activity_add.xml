@@ -22,12 +22,12 @@
             android:autofillHints="Nothing"
             android:background="@color/gray_white"
             android:fontFamily="@font/futuraheavyfont"
-            android:gravity="top"
+            android:gravity="center"
             android:hint="@string/enter_title_here"
             android:inputType="text"
             android:selectAllOnFocus="true"
-            android:text="@string/enter_title_here"
             android:textColor="@color/black"
+            android:textColorHint="#FC323030"
             android:textSize="26sp" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -63,6 +63,7 @@
         android:layout_marginEnd="36dp"
         android:background="@drawable/round_button"
         android:fontFamily="@font/futuramediumbt"
-        android:text="Save note" />
+        android:text="@string/save_note"
+        android:textColor="@color/white" />
 
 </LinearLayout>
