@@ -13,8 +13,7 @@
         android:background="@color/gray_white"
         android:paddingStart="25dp"
         android:paddingTop="16dp"
-        android:paddingEnd="36dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Light">
+        android:paddingEnd="36dp">
 
         <EditText
             android:id="@+id/add_activity_title"

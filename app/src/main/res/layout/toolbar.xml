@@ -8,7 +8,6 @@
     android:paddingStart="25dp"
     android:paddingTop="16dp"
     android:paddingEnd="36dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Light"
     app:titleTextAppearance="@style/TitleBarTextAppearance">
 
     <SearchView
