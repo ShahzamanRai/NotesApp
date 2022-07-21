@@ -19,7 +19,7 @@ public class splashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         tView = findViewById(R.id.textSplash);
-        Animation move = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move);
+        Animation move = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
         tView.startAnimation(move);
 
 

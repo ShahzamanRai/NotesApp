@@ -24,8 +24,4 @@
         <item name="android:fontFamily">@font/futura_bold</item>
     </style>
 
-    <style name="TitleBarTextAppearance.addText">
-        <item name="android:textSize">@dimen/abc_text_size_title_material_toolbar</item>
-        <item name="android:fontFamily">@font/futura_bold</item>
-    </style>
 </resources>

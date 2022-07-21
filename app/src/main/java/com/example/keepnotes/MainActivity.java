@@ -2,6 +2,7 @@ package com.example.keepnotes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -47,7 +48,21 @@ public class MainActivity extends AppCompatActivity {
 
         //Moving from MainActivity to add_Notes Activity
         FloatingActionButton button = findViewById(R.id.floatingActionButton);
-        button.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, add_activity.class)));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, add_activity.class);
+                startActivity(intent);
+            }
+        });
+
+        Intent intent = getIntent();
+        String title = intent.getStringExtra("title");
+        String body = intent.getStringExtra("Body");
+        arrNotes.add(new model(title, body));
+        adapter.notifyItemInserted(arrNotes.size() - 1);
+
+
     }
 
 }
