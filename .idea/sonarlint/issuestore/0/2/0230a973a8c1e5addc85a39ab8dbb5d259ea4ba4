@@ -1,0 +1,6 @@
+
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ä¯…óøÿÿÿÿ8Ó„Œ¢0
+v	java:S116"URename this field "tite_model" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê‘”ûÿÿÿÿ8Ó„Œ¢0
+v	java:S116"URename this field "text_model" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê‘”ûÿÿÿÿ8¨Ó„Œ¢0
+J
+java:S1659"(Declare "text_model" on a separate line.(ê‘”ûÿÿÿÿ8«Ó„Œ¢0

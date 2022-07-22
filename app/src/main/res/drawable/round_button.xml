@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:shape="rectangle"
     tools:ignore="MissingDefaultResource">
-    <solid android:color="@color/black" />
+    <solid android:color="@color/blue" />
 
     <corners
         android:bottomLeftRadius="36dp"

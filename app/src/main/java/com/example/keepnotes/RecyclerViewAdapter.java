@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.airbnb.lottie.L;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context context;
     List<model> arrNotes;
 
-    RecyclerViewAdapter(Context context, ArrayList<model> arrNotes) {
+    RecyclerViewAdapter(Context context, List<model> arrNotes) {
         this.context = context;
         this.arrNotes = arrNotes;
     }
@@ -39,6 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(arrNotes.get(position).tite_model);
         holder.body.setText(arrNotes.get(position).text_model);
+
     }
 
     @Override
@@ -54,6 +57,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
             title = itemView.findViewById(R.id.text_title_view);
             body = itemView.findViewById(R.id.text_text_view);
+
 
 
         }

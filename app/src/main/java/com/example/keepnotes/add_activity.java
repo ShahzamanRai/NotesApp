@@ -46,7 +46,6 @@ public class add_activity extends AppCompatActivity {
                     Toast.makeText(add_activity.this, "Fields can't be empty",
                             Toast.LENGTH_LONG).show();
                 } else {
-
                     MainActivity.addNotes(titleBody, textBody);
                     finish();
                 }
