@@ -7,5 +7,23 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 k
 ;app/src/main/java/com/example/keepnotes/splashActivity.java,2/4/24d515f50c7ea352566b7e943f6dd00e6a8b1e1c
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+e
+5app/src/main/java/com/example/keepnotes/NotesDao.java,5/a/5a28240ee3211c0156f7c4c38e604884362e82d8
 b
 2app/src/main/java/com/example/keepnotes/model.java,0/2/0230a973a8c1e5addc85a39ab8dbb5d259ea4ba4
+b
+2app/src/main/java/com/example/keepnotes/Notes.java,8/5/85a0c87f1d3f8fab83812cdc5348dcb8ccd950fe
+k
+;app/src/main/java/com/example/keepnotes/DatabaseHelper.java,6/2/6223cc7d0747f32ca0284ec147696f355aeba8be
+p
+@app/src/main/java/com/example/keepnotes/RecyclerViewAdapter.java,1/4/144fc196a47fc4d4e9587a97a1a10d3ed27f7d90
+h
+8app/src/main/java/com/example/keepnotes/addActivity.java,6/e/6ef620fc51b963a91a8116f06d50d374be620c90
+i
+9app/src/main/java/com/example/keepnotes/MainActivity.java,7/3/7373c574edd2aadd8ba4481fe9fc1027d90015dd

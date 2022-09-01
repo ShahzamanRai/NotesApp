@@ -10,13 +10,15 @@
         <entry key="app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/icon.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/icon_add.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/left_arrow.xml" value="0.1125" />
-        <entry key="app/src/main/res/drawable/round_button.xml" value="0.1065" />
+        <entry key="app/src/main/res/drawable/round_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/search_icon.xml" value="0.1125" />
         <entry key="app/src/main/res/layout/activity_add.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_add_notes.xml" value="0.221875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_view.xml" value="0.17119565217391305" />
         <entry key="app/src/main/res/layout/add_notes.xml" value="0.221875" />
         <entry key="app/src/main/res/layout/single_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.15" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_View"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -8,7 +9,8 @@
     android:background="#FDFDFD"
     android:orientation="vertical"
     app:cardBackgroundColor="@color/blue"
-    app:cardCornerRadius="12dp">
+    app:cardCornerRadius="12dp"
+    app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,13 +46,11 @@
                 android:id="@+id/index"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0"
+                android:layout_marginEnd="5dp"
                 android:fontFamily="@font/futura_bold"
                 android:text="1"
                 android:textColor="@color/blue"
                 android:textSize="40sp" />
-
-
         </LinearLayout>
 
         <TextView
