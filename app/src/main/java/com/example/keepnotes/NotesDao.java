@@ -18,9 +18,6 @@ public interface NotesDao {
     @Query("SELECT * FROM notesTable")
     LiveData<List<Notes>> findAllNotes();
 
-    @Query(" DELETE FROM notesTable WHERE id= :uid")
-    void deleteById(int uid);
-
     @Insert
     void addNotes(Notes note);
 

@@ -3,11 +3,11 @@ package com.example.keepnotes;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,7 +21,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context context;
     ArrayList<Notes> arrNotes;
     DatabaseHelper databaseHelper;
-    private RecyclerView.RecyclerListener listener;
 
     RecyclerViewAdapter(Context context, ArrayList<Notes> arrNotes, DatabaseHelper databaseHelper) {
         this.context = context;
@@ -29,9 +28,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.databaseHelper = databaseHelper;
     }
 
-    public RecyclerViewAdapter(ArrayList<Notes> arrNotes, RecyclerView.RecyclerListener listener){
-        this.arrNotes = arrNotes;
-        this.listener = listener;
+    public void setFilteredList(ArrayList<Notes> filteredList) {
+        this.arrNotes = filteredList;
+        notifyDataSetChanged();
+
     }
 
     @NonNull
@@ -47,18 +47,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.body.setText(arrNotes.get(position).text);
         holder.index.setText(String.valueOf(position + 1));
 
+
+        holder.llView.setOnClickListener(view -> {
+            Intent iNext = new Intent(context, ViewActivity.class);
+            iNext.putExtra("title", arrNotes.get(position).title);
+            iNext.putExtra("text", arrNotes.get(position).text);
+            iNext.putExtra("id", arrNotes.get(position).id);
+            context.startActivity(iNext);
+        });
+
         holder.llView.setOnLongClickListener(view -> {
-            showView(position);
+            showDeleteDialog(position);
             return true;
         });
 
 
-        holder.llView.setOnClickListener(view -> {
-            Intent iNext = new Intent(context, ViewActivity.class);
-            iNext.putExtra("title",arrNotes.get(position).title);
-            iNext.putExtra("text",arrNotes.get(position).text);
-            context.startActivity(iNext);
-        });
     }
 
     @Override
@@ -81,12 +84,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
-    private void showView(int position) {
+    private void showDeleteDialog(int position) {
         AlertDialog.Builder alert = new AlertDialog.Builder(context)
                 .setTitle("Delete view")
                 .setMessage("Are you sure to delete")
                 .setIcon(R.drawable.ic_baseline_delete_24)
-                .setPositiveButton("yes", (dialogInterface, i) -> databaseHelper.notesDao().deleteById(arrNotes.get(position).id))
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        databaseHelper.notesDao().deleteNotes(new Notes(arrNotes.get(position).getId(), arrNotes.get(position).getTitle(), arrNotes.get(position).getText()));
+                    }
+                })
                 .setNegativeButton("No", (dialogInterface, i) -> {
 
                 });

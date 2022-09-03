@@ -23,13 +23,10 @@ public class splashActivity extends AppCompatActivity {
         tView.startAnimation(move);
 
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent iNext = new Intent(splashActivity.this, MainActivity.class);
-                startActivity(iNext);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            Intent iNext = new Intent(splashActivity.this, MainActivity.class);
+            startActivity(iNext);
+            finish();
         }, 5100);
 
     }

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_add_activity"
+        android:id="@+id/toolbar_update_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="25dp"
@@ -15,8 +16,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <EditText
-            android:id="@+id/add_activity_title"
+            android:id="@+id/update_activity_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="Nothing"
@@ -25,16 +27,17 @@
             android:gravity="center"
             android:hint="@string/enter_title_here"
             android:inputType="textMultiLine"
-            android:selectAllOnFocus="true"
+            android:minHeight="48dp"
             android:textColor="@color/black"
             android:textColorHint="#FC323030"
-            android:textSize="26sp" />
+            android:textSize="26sp"
+             />
 
     </androidx.appcompat.widget.Toolbar>
 
 
     <EditText
-        android:id="@+id/add_activity_text"
+        android:id="@+id/update_activity_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -53,24 +56,25 @@
         android:scrollbars="vertical"
         android:textColor="#353535"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_add_activity">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_update_activity">
 
     </EditText>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Update_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="26dp"
         android:background="@drawable/round_button"
         android:fontFamily="@font/futuramediumbt"
-        android:text="@string/save_note"
+        android:text="@string/update"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

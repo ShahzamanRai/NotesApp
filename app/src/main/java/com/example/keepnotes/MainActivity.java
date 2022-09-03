@@ -1,10 +1,9 @@
 package com.example.keepnotes;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,12 +20,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-    static ArrayList<Notes> arrNotes = new ArrayList<>();
-    @SuppressLint("StaticFieldLeak")
+    ArrayList<Notes> arrNotes = new ArrayList<>();
     RecyclerViewAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
     notesModelView modelView;
     DatabaseHelper database;
+    android.widget.SearchView searchView;
 
 
     @Override
@@ -48,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(List<Notes> notes) {
                 arrNotes.clear();
                 arrNotes.addAll(notes);
-                adapter.notifyItemInserted(arrNotes.size()-1);            }
+                adapter.notifyDataSetChanged();
+            }
         });
-
 
 
         //Setting custom Toolbar
@@ -65,5 +64,37 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                filterList(s);
+                return false;
+
+            }
+        });
     }
+
+    private void filterList(String text) {
+        if (!text.trim().isEmpty()) {
+            ArrayList<Notes> filteredList = new ArrayList<>();
+            for (Notes notes : arrNotes) {
+                if (notes.title.toLowerCase().contains(text.toLowerCase()) || notes.text.toLowerCase().contains(text.toLowerCase())) {
+                    filteredList.add(notes);
+                }
+                adapter.setFilteredList(filteredList);
+            }
+        } else {
+            adapter.setFilteredList(arrNotes);
+        }
+    }
+
 }
+
+

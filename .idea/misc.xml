@@ -7,22 +7,28 @@
         <entry key="app/src/main/res/drawable/arrow_back_ios_new-48px.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/back_arrow.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/back_button.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/cursor.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/icon.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/icon_add.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/iconmonstr_pencil_14.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/left_arrow.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/round_button.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/search_icon.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/update.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/update_icon.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_add_notes.xml" value="0.221875" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_view.xml" value="0.17119565217391305" />
+        <entry key="app/src/main/res/layout/activity_update.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_view.xml" value="0.21" />
         <entry key="app/src/main/res/layout/add_notes.xml" value="0.221875" />
         <entry key="app/src/main/res/layout/single_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.15" />
         <entry key="app/src/main/res/layout/toolbar_add.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/toolbar_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/widget_layout.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>

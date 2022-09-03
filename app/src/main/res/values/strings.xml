@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Keep Notes</string>
+    <string name="app_name_title">My Notes</string>
     <string name="todo">TODO</string>
     <string name="enter_text_here">Enter text here</string>
     <string name="enter_title_here">Enter title here</string>
-    <string name="save_note">Save note</string>
+    <string name="save_note">Save Note</string>
+    <string name="title">title</string>
+    <string name="body">body</string>
+    <string name="update">Update Note</string>
 </resources>
