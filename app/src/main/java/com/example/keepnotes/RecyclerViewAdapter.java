@@ -1,13 +1,13 @@
 package com.example.keepnotes;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -85,20 +85,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     private void showDeleteDialog(int position) {
-        AlertDialog.Builder alert = new AlertDialog.Builder(context)
-                .setTitle("Delete view")
-                .setMessage("Are you sure to delete")
-                .setIcon(R.drawable.ic_baseline_delete_24)
-                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        databaseHelper.notesDao().deleteNotes(new Notes(arrNotes.get(position).getId(), arrNotes.get(position).getTitle(), arrNotes.get(position).getText()));
-                    }
-                })
-                .setNegativeButton("No", (dialogInterface, i) -> {
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.dialog_alert);
+        dialog.show();
+        Button positive = dialog.findViewById(R.id.positive);
+        Button negative = dialog.findViewById(R.id.negative);
+        positive.setOnClickListener(view -> {
+            databaseHelper.notesDao().deleteNotes(new Notes(arrNotes.get(position).getId(), arrNotes.get(position).getTitle(), arrNotes.get(position).getText()));
+            dialog.dismiss();
 
-                });
-        alert.show();
+        });
+
+        negative.setOnClickListener(view -> {
+            dialog.dismiss();
+        });
     }
 }
 

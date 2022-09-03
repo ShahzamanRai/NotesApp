@@ -2,8 +2,11 @@ package com.example.keepnotes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,18 +25,20 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Notes> arrNotes = new ArrayList<>();
     RecyclerViewAdapter adapter;
+    RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     notesModelView modelView;
     DatabaseHelper database;
     android.widget.SearchView searchView;
-
+    Toolbar toolbar1;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initVar();
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         adapter = new RecyclerViewAdapter(this, arrNotes, database);
         recyclerView.setAdapter(adapter);
 
@@ -53,18 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Setting custom Toolbar
-        Toolbar toolbar1 = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar1);
-
         //Moving from MainActivity to add_Notes Activity
-        Button button = findViewById(R.id.floatingActionButton);
         button.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, addActivity.class);
             startActivity(intent);
 
         });
 
-        searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -93,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         } else {
             adapter.setFilteredList(arrNotes);
         }
+    }
+
+    private void initVar() {
+        recyclerView = findViewById(R.id.recycler_view);
+        toolbar1 = findViewById(R.id.toolbar);
+        button = findViewById(R.id.floatingActionButton);
+        searchView = findViewById(R.id.searchView);
+
     }
 
 }

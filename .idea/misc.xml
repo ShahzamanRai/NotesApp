@@ -7,8 +7,11 @@
         <entry key="app/src/main/res/drawable/arrow_back_ios_new-48px.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/back_arrow.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/back_button.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/close.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/cursor.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/icon.xml" value="0.1125" />
         <entry key="app/src/main/res/drawable/icon_add.xml" value="0.1125" />
@@ -25,6 +28,7 @@
         <entry key="app/src/main/res/layout/activity_update.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_view.xml" value="0.21" />
         <entry key="app/src/main/res/layout/add_notes.xml" value="0.221875" />
+        <entry key="app/src/main/res/layout/dialog_alert.xml" value="0.32503457814661135" />
         <entry key="app/src/main/res/layout/single_view.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.15" />
         <entry key="app/src/main/res/layout/toolbar_add.xml" value="0.33" />

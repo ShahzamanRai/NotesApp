@@ -8,4 +8,9 @@
     <string name="title">title</string>
     <string name="body">body</string>
     <string name="update">Update Note</string>
+    <string name="delete_note">Delete Note</string>
+    <string name="are_you_sure_to_delete">Are you sure to delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="developed_by_shahzaman">Developed by Shahzaman</string>
 </resources>
