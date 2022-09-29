@@ -24,7 +24,7 @@
             <ImageView
                 android:id="@+id/view_update_button"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:contentDescription="@string/update"
                 app:layout_constraintBottom_toTopOf="@+id/view_activity_text"
@@ -56,7 +56,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="20dp"
             android:autofillHints="Nothing"
             android:background="@color/white"
             android:fontFamily="@font/futuramediumbt"

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -10,9 +9,9 @@
         android:id="@+id/toolbar_update_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="25dp"
+        android:paddingStart="20dp"
         android:paddingTop="16dp"
-        android:paddingEnd="36dp"
+        android:paddingEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -30,8 +29,15 @@
             android:minHeight="48dp"
             android:textColor="@color/black"
             android:textColorHint="#FC323030"
-            android:textSize="26sp"
-             />
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/speech_update_activity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/speech_to_text_48px" />
+
 
     </androidx.appcompat.widget.Toolbar>
 

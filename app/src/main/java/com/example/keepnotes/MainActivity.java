@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         //setting up recycler view
         layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
-
         modelView = new ViewModelProvider(this).get(notesModelView.class);
         modelView.getAllNotes().observe(this, new Observer<List<Notes>>() {
             @Override

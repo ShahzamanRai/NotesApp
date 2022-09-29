@@ -9,9 +9,9 @@
         android:id="@+id/toolbar_add_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="25dp"
+        android:paddingStart="20dp"
         android:paddingTop="16dp"
-        android:paddingEnd="36dp"
+        android:paddingEnd="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,10 +25,18 @@
             android:gravity="center"
             android:hint="@string/enter_title_here"
             android:inputType="textMultiLine"
+            android:minHeight="48dp"
             android:selectAllOnFocus="true"
             android:textColor="@color/black"
             android:textColorHint="#FC323030"
             android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/speech_add_activity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:src="@drawable/speech_to_text_48px" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -52,6 +60,7 @@
         android:scrollbarStyle="outsideOverlay"
         android:scrollbars="vertical"
         android:textColor="#353535"
+        android:textColorHint="#757575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_add_activity">
 
