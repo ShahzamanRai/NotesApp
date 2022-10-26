@@ -35,8 +35,10 @@
             android:id="@+id/speech_update_activity"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="end"
-            android:src="@drawable/speech_to_text_48px" />
+            android:layout_gravity="end|top"
+            android:background="@color/white"
+            android:src="@drawable/speech_to_text_48px"
+            android:contentDescription="@string/speechtotext" />
 
 
     </androidx.appcompat.widget.Toolbar>

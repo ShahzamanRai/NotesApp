@@ -13,4 +13,5 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="developed_by_shahzaman">Developed by Shahzaman</string>
+    <string name="speechtotext">SpeechToText</string>
 </resources>
