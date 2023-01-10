@@ -44,7 +44,7 @@
                 android:text="@string/title"
                 android:textColor="@color/blue"
                 android:textIsSelectable="true"
-                android:textSize="26sp"
+                android:textSize="28sp"
                />
 
 
@@ -68,14 +68,12 @@
             android:scrollbarStyle="outsideInset"
             android:scrollbars="vertical"
             android:text="@string/body"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textColor="#353535"
             android:textIsSelectable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar_view_activity" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ScrollView>
