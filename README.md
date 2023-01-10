@@ -7,10 +7,11 @@ Notes Taking Application by using Java, XML and Room Database developed by Shahz
 https://github.com/ShahzamanRai/NotesApp/releases/download/1.0.2/KeepNotesV1.1.apk
 
 # Screenshots
-<img src="https://github.com/ShahzamanRai/Music_player/blob/master/screenshots/MusicAppMain.png" width="650"/> 
-<img src="https://github.com/ShahzamanRai/Music_player/blob/master/screenshots/MusicAppPlayer.png" width="650"/>
-<img src="https://github.com/ShahzamanRai/Music_player/blob/master/screenshots/MusicAppPlaylists.png" width="650"/> 
-<img src="https://github.com/ShahzamanRai/Music_player/blob/master/screenshots/MusicAppPlaylistsDetails.png" width="650"/>
+<img src="https://github.com/ShahzamanRai/NotesApp/blob/master/screenshots/NotesAppSplash.png" width="650"/> 
+<img src="https://github.com/ShahzamanRai/NotesApp/blob/master/screenshots/NotesAppMain.png" width="650"/> 
+<img src="https://github.com/ShahzamanRai/NotesApp/blob/master/screenshots/NotesAppNew.png" width="650"/> 
+<img src="https://github.com/ShahzamanRai/NotesApp/blob/master/screenshots/NotesAppView.png" width="650"/> 
+<img src="https://github.com/ShahzamanRai/NotesApp/blob/master/screenshots/NotesAppUpdate.png" width="650"/> 
 
 # Features:
 * Beautiful UI with New Material Widgets 📱
@@ -18,6 +19,7 @@ https://github.com/ShahzamanRai/NotesApp/releases/download/1.0.2/KeepNotesV1.1.a
 * Delete Notes 💢
 * Search Notes 🔍
 * Update Notes 📱
+* Store Notes in Local Database 🎗️
 
 
 ## 🔗 Links
