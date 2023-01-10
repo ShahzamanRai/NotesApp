@@ -1,4 +1,4 @@
-![Twitter](https://img.shields.io/twitter/follow/srZamanRai?label=Follow%20%7C%20Shahzaman&style=social)
+[![Twitter](https://img.shields.io/twitter/follow/srZamanRai?label=Follow%20%7C%20Shahzaman&style=social)](https://twitter.com/SrZamanRai)
 
 # Keep Notes
 Notes Taking Application by using Java, XML and Room Database developed by Shahzaman Rai.
