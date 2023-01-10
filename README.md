@@ -4,7 +4,7 @@
 Notes Taking Application by using Java, XML and Room Database developed by Shahzaman Rai.
 
 # Try it
-https://github.com/ShahzamanRai/Music_player/releases/download/MusicBeats/MusicBeatsV1.0.apk
+https://github.com/ShahzamanRai/NotesApp/releases/download/1.0.2/KeepNotesV1.1.apk
 
 # Screenshots
 <img src="https://github.com/ShahzamanRai/Music_player/blob/master/screenshots/MusicAppMain.png" width="650"/> 
